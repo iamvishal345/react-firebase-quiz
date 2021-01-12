@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useFirebase } from "./Firebase/FirebaseContext";
+// import { useFirebase } from "./Firebase/FirebaseContext";
 export default function SaveScoreForm({ score, scoreSaved }) {
-  const [username, setUsername] = useState("");
-  const firebase = useFirebase();
+  //   const [username, setUsername] = useState("");
+  //   const firebase = useFirebase();
 
-  const onUsernameChange = (e) => {
-    const updatedUsername = e.target.value;
-    setUsername(updatedUsername);
-  };
+  //   const onUsernameChange = (e) => {
+  //     const updatedUsername = e.target.value;
+  //     setUsername(updatedUsername);
+  //   };
 
-  const saveHighScore = (e) => {
-    e.preventDefault();
-    const record = {
-      name: username,
-      score,
-    };
+  //   const saveHighScore = (e) => {
+  //     e.preventDefault();
+  //     const record = {
+  //       name: username,
+  //       score,
+  //     };
 
-    firebase.scores().push(record, () => {
-      scoreSaved();
-    });
-  };
+  //     firebase.scores().push(record, () => {
+  //       scoreSaved();
+  //     });
+  //   };
 
   return (
     <div className="container">
