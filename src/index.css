@@ -205,3 +205,53 @@ input::placeholder {
 .cal-container > svg {
   height: 700px;
 }
+
+/*footer  */
+.footer{
+  position:relative;
+  padding:0;
+}
+.footer-sub{
+  background-color: #383737;
+  padding:30px 0px;
+  font-size:12px;
+}
+.footer_data{
+  padding:0px 46px;
+  display: flex;
+}
+
+.footer_data p, .footer_data a{
+  color:white;
+  text-decoration:none;
+}
+.footer_data a:hover{
+  text-decoration: underline;
+}
+.footer_made_by{
+  text-align: center;
+  width:90%;
+}
+
+.linkedin_footer span{
+  background-color: white;
+  padding:2px;
+}
+#vishal_profile , #priya_profile{
+  margin-top:6px;
+}
+
+#top-heading{
+  text-align: left;
+  margin-bottom:4px;
+  margin-left:12px;
+}
+#top-heading span{
+  font-family:Bernard MT Condensed !important;
+}
+#fire{
+  color:#1d609b
+}
+#quiz{
+  color:#56a5eb
+}
