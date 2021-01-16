@@ -26,18 +26,26 @@ h1 {
   color: #56a5eb;
   margin-bottom: 5rem;
 }
-
+.hud-main-text{
+  color: #56a5eb;
+}
 h2 {
   font-size: 4.2rem;
   margin-bottom: 4rem;
   font-weight: 700;
+}
+h3{
+  font-size:3.0rem;
+  margin-bottom:4rem;
+  font-weight:600;
+  color:#1d609b;
 }
 
 /* UTILITIES */
 
 .container {
   width: 100vw;
-  height: 76vh;
+  min-height: 76vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -113,6 +121,7 @@ input::placeholder {
   font-size: 1.8rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
   background-color: white;
+  border-radius:8px;
 }
 
 .choice-container:hover {
@@ -126,11 +135,14 @@ input::placeholder {
   padding: 1.5rem 2.5rem;
   background-color: #56a5eb;
   color: white;
+  border-radius:8px 0px 0px 8px;
 }
 
 .choice-text {
   padding: 1.5rem;
   width: 100%;
+  color:#1d609b;
+  font-weight:600;
 }
 
 .correct {
@@ -151,6 +163,7 @@ input::placeholder {
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
+  color:#1d609b;
 }
 
 .hud-main-text {
@@ -159,13 +172,13 @@ input::placeholder {
 
 #progressBar {
   width: 20rem;
-  height: 4rem;
+  height: 3rem;
   border: 0.3rem solid #56a5eb;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
-  height: 3.4rem;
+  height: 2.4rem;
   background-color: #56a5eb;
   width: 0%;
   transition: 300ms ease all;
@@ -258,6 +271,9 @@ input::placeholder {
 #top-heading span{
   font-family:Bernard MT Condensed !important;
 }
+#top-heading a{
+  text-decoration: none;
+}
 #fire{
   color:#1d609b
 }
@@ -273,7 +289,7 @@ input::placeholder {
     width:100%;
     text-align:center;
   }
-  .container {
-    height:60vh;
+  .container{
+    min-height:68vh;
   }
 }
