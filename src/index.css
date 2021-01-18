@@ -26,7 +26,7 @@ h1 {
   color: #56a5eb;
   margin-bottom: 5rem;
 }
-.hud-main-text{
+.hud-main-text {
   color: #56a5eb;
 }
 h2 {
@@ -34,18 +34,20 @@ h2 {
   margin-bottom: 4rem;
   font-weight: 700;
 }
-h3{
-  font-size:3.0rem;
-  margin-bottom:4rem;
-  font-weight:600;
-  color:#1d609b;
+h3 {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 600;
+  color: #1d609b;
 }
 
 /* UTILITIES */
 
 .container {
+  margin-top: 2rem;
+  height: 80vh;
+  margin-bottom: 1px;
   width: 100vw;
-  min-height: 76vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -53,7 +55,7 @@ h3{
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .container > * {
@@ -71,8 +73,8 @@ h3{
   text-decoration: none;
   color: #56a5eb;
   background-color: white;
-  border-radius:8px;
-  box-shadow:0.1rem 0.2rem 0.7rem #56a5eb;
+  border-radius: 8px;
+  box-shadow: 0.1rem 0.2rem 0.7rem #56a5eb;
 }
 
 .btn:hover {
@@ -80,8 +82,8 @@ h3{
   box-shadow: 0 0.4rem 1.4rem 0.1rem rgba(86, 185, 235, 0.5);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
-  color:white;
-  background-color:#56a5eb;
+  color: white;
+  background-color: #56a5eb;
 }
 
 .btn[disabled]:hover {
@@ -105,7 +107,7 @@ input {
   font-size: 1.8rem;
   border: none;
   box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-  border-radius:6px;
+  border-radius: 6px;
 }
 
 input::placeholder {
@@ -121,7 +123,7 @@ input::placeholder {
   font-size: 1.8rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
   background-color: white;
-  border-radius:8px;
+  border-radius: 8px;
 }
 
 .choice-container:hover {
@@ -135,14 +137,14 @@ input::placeholder {
   padding: 1.5rem 2.5rem;
   background-color: #56a5eb;
   color: white;
-  border-radius:8px 0px 0px 8px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .choice-text {
   padding: 1.5rem;
   width: 100%;
-  color:#1d609b;
-  font-weight:600;
+  color: #1d609b;
+  font-weight: 600;
 }
 
 .correct {
@@ -163,7 +165,7 @@ input::placeholder {
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
-  color:#1d609b;
+  color: #1d609b;
 }
 
 .hud-main-text {
@@ -174,11 +176,15 @@ input::placeholder {
   width: 20rem;
   height: 3rem;
   border: 0.3rem solid #56a5eb;
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
+  position: relative;
 }
 
 #progressBarFull {
-  height: 2.4rem;
+  height: 3rem;
+  position: absolute;
+  top: -3px;
+  left: -1px;
   background-color: #56a5eb;
   width: 0%;
   transition: 300ms ease all;
@@ -221,75 +227,76 @@ input::placeholder {
   z-index: -1;
 }
 .cal-container > svg {
-  height: 700px;
+  height: 400px;
 }
 
 /*footer  */
-.footer{
-  position:relative;
-  padding:0;
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
 }
-.footer-sub{
+.footer-sub {
   background-color: #383737;
-  padding:20px 0px;
-  font-size:12px;
+  padding: 20px 0px;
+  font-size: 12px;
 }
-.footer_data{
-  display: flex; 
-  padding:0px 46px;
-  flex-wrap:wrap;
-  flex-direction:row;
+.footer_data {
+  display: flex;
+  padding: 0px 46px;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
-.footer_data p, .footer_data a{
-  color:white;
-  text-decoration:none;
-}
-.footer_data a:hover{
-  text-decoration: underline;
-}
-.footer_made_by{
-  text-align: center;
-  width:90%;
-}
-
-.linkedin_footer span{
-  background-color: white;
-  padding:2px;
-}
-#vishal_profile , #priya_profile{
-  margin-top:6px;
-}
-
-#top-heading{
-  text-align: left;
-  margin-bottom:4px;
-  margin-left:12px;
-}
-#top-heading span{
-  font-family:Bernard MT Condensed !important;
-}
-#top-heading a{
+.footer_data p,
+.footer_data a {
+  color: white;
   text-decoration: none;
 }
-#fire{
-  color:#1d609b
+.footer_data a:hover {
+  text-decoration: underline;
 }
-#quiz{
-  color:#56a5eb
+.footer_made_by {
+  text-align: center;
+  width: 90%;
 }
 
-@media screen and (min-width:320px) and (max-width:480px){
-  .footer_made_by{
+.linkedin_footer span {
+  background-color: white;
+  padding: 2px;
+}
+#vishal_profile,
+#priya_profile {
+  margin-top: 6px;
+}
+
+#top-heading {
+  text-align: left;
+  position: absolute;
+  top: 0;
+  padding: 0.5rem 0 0 1rem;
+}
+#top-heading span {
+  font-family: Bernard MT Condensed !important;
+}
+#top-heading a {
+  text-decoration: none;
+}
+#fire {
+  color: #1d609b;
+}
+#quiz {
+  color: #56a5eb;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer_made_by {
     width: 100%;
   }
-  .linkedin_footer{
-    width:100%;
-    text-align:center;
-  }
-  .container{
-    min-height:68vh;
+  .linkedin_footer {
+    width: 100%;
+    text-align: center;
   }
 }

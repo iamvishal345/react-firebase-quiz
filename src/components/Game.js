@@ -18,10 +18,6 @@ export default function Game({ history }) {
     loadQuestions().then(setQuestions).catch(console.error);
   }, []);
 
-  const scoreSaved = () => {
-    history.push("/");
-  };
-
   const changeQuestion = useCallback(
     (bonus = 0) => {
       if (questions.length === 0) {
@@ -96,9 +92,7 @@ export default function Game({ history }) {
         </div>
       )}
 
-      {done && (
-        <SaveScoreForm score={score} name={fullName} scoreSaved={scoreSaved} />
-      )}
+      {done && <SaveScoreForm score={score} name={fullName} />}
     </>
   );
 }
