@@ -25,7 +25,7 @@ export default function Question({ question, changeQuestion }) {
 
     return (
         <div>
-            <h2 dangerouslySetInnerHTML={{ __html: question.question }}></h2>
+            <h3 dangerouslySetInnerHTML={{ __html: question.question }}></h3>
             {question.answerChoices.map((choice, index) => (
                 <div
                     key={index}
