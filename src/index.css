@@ -247,7 +247,7 @@ input::placeholder {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .footer_data p,
@@ -260,12 +260,11 @@ input::placeholder {
 }
 .footer_made_by {
   text-align: center;
-  width: 90%;
 }
 
-.linkedin_footer span {
-  background-color: white;
-  padding: 2px;
+.linkedin_footer > p {
+  display: flex;
+  align-items: center;
 }
 #vishal_profile,
 #priya_profile {

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as LinkedIn } from "../assets/linkedin.svg";
 
 export default function Footer() {
   return (
@@ -7,15 +8,12 @@ export default function Footer() {
         <div className="footer-sub">
           <div className="footer_data">
             <div className="footer_made_by">
-              <p>Made with 🤍</p>
+              <p>Made with ❤</p>
             </div>
             <div className="linkedin_footer">
               <p>
                 Connect with us on{" "}
-                <span>
-                  <i>&#10084;</i>
-                </span>{" "}
-                :
+                <LinkedIn style={{ height: "20px", marginLeft: "5px" }} />
               </p>
               <p id="vishal_profile">
                 <a
