@@ -10,13 +10,15 @@ import Header from "./components/header";
 function App() {
   return (
     <Router>
-      <Header></Header>
-      <div className="container">
-        <Route exact path="/" component={Home} />
-        <Route path="/game" component={Game} />
-        <Route path="/highScores" component={HighScores} />
+      <div className="app-container">
+        <Header></Header>
+        <div className="container">
+          <Route exact path="/" component={Home} />
+          <Route path="/game" component={Game} />
+          <Route path="/highScores" component={HighScores} />
+        </div>
+        <Footer></Footer>
       </div>
-      <Footer></Footer>
     </Router>
   );
 }
