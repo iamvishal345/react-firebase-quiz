@@ -44,8 +44,7 @@ h3 {
 /* UTILITIES */
 
 .container {
-  min-height: 80vh;
-  margin-bottom: 1px;
+  min-height: 79vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -53,7 +52,7 @@ h3 {
   text-align: center;
   align-items: center;
   max-width: 80rem;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -231,7 +230,6 @@ input::placeholder {
 
 /*footer  */
 .footer {
-  position: fixed;
   width: 100%;
   bottom: 0px;
 }
@@ -272,8 +270,6 @@ input::placeholder {
 
 #top-heading {
   text-align: left;
-  position: absolute;
-  top: 0;
   padding: 0.5rem 0 0 1rem;
 }
 #top-heading span {
@@ -281,6 +277,9 @@ input::placeholder {
 }
 #top-heading a {
   text-decoration: none;
+}
+#top-heading h2 {
+  margin: 0;
 }
 #fire {
   color: #1d609b;
@@ -290,6 +289,9 @@ input::placeholder {
 }
 
 @media screen and (max-width: 480px) {
+  .container {
+    min-height: 76.8vh;
+  }
   .footer_made_by {
     width: 100%;
   }

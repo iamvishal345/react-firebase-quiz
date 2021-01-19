@@ -57,7 +57,7 @@ export default function Game({ history }) {
     <>
       {loading && !done && <div id="loader" />}
       {!loading && !done && !haveFullName && (
-        <div className="container">
+        <div>
           <form
             onSubmit={(e) => {
               e.preventDefault();
