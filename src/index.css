@@ -44,8 +44,7 @@ h3 {
 /* UTILITIES */
 
 .container {
-  margin-top: 2rem;
-  height: 80vh;
+  min-height: 80vh;
   margin-bottom: 1px;
   width: 100vw;
   display: flex;
@@ -54,7 +53,7 @@ h3 {
   text-align: center;
   align-items: center;
   max-width: 80rem;
-  margin: 0 auto;
+  margin: 2rem auto 0;
   padding: 1rem;
 }
 
@@ -290,12 +289,18 @@ input::placeholder {
   color: #56a5eb;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .footer_made_by {
     width: 100%;
   }
   .linkedin_footer {
     width: 100%;
-    text-align: center;
+  }
+  .linkedin_footer > p {
+    justify-content: center;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 }
