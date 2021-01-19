@@ -8,7 +8,6 @@ export default function HighScores() {
   useEffect(() => {
     getScores()
       .then((data) => {
-        console.log(data);
         setLoading(false);
         setScores(data);
       })
@@ -26,7 +25,7 @@ export default function HighScores() {
           <div id="highScoresList">
             {scores.map((record, i) => (
               <li key={i} className="high-score">
-                {record.name} - {record.score}
+                <span>{record.name}</span> - <span>{record.score}</span>
               </li>
             ))}
           </div>

@@ -6,7 +6,7 @@ export default function SaveScoreForm({ score, name }) {
   useEffect(() => {
     try {
       (async () => {
-        await saveScoreDocument(score, name);
+        await saveScoreDocument(name, score);
         setLoading(false);
       })();
     } catch (error) {

@@ -29,10 +29,12 @@ export const getScores = async () => {
   const scoreRef = firestore.collection("scores");
   try {
     const res = await scoreRef.get();
-    return res.docs.map((docs) => {
-      const { name, score } = docs.data();
-      return { name: name, score: score };
-    });
+    return res.docs
+      .map((docs) => {
+        const { name, score } = docs.data();
+        return { name: name, score: score };
+      })
+      .sort((a, b) => b.score - a.score);
   } catch (err) {
     console.log("Error Saving Score", err.message);
   }

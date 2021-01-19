@@ -40,6 +40,11 @@
   left: 2px;
   font-size: 16px;
 }
+.input-value {
+  top: -20px;
+  left: 2px;
+  font-size: 16px;
+}
 
 .conf0 {
   fill: #fc6394;

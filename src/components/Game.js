@@ -72,7 +72,10 @@ export default function Game({ history }) {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
               />
-              <label className="form-input-label" htmlFor="fullName">
+              <label
+                className={`form-input-label ${fullName && "input-value"}`}
+                htmlFor="fullName"
+              >
                 Name
               </label>
             </div>

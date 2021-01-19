@@ -1,0 +1,68 @@
+[
+  {
+    "correct_answer": "Singleton",
+    "incorrect_answers": ["Prototype", "Session", "Request"],
+    "question": "What is the default scope of the beans?"
+  },
+  {
+    "correct_answer": "Iran",
+    "incorrect_answers": ["Kuwait", "UAE", "Saudi Arabia"],
+    "question": "Which country has agreed to accept the payment of export of oil and petroleum in ₹ instead of $."
+  },
+  {
+    "correct_answer": "India and Pakistan",
+    "incorrect_answers": [
+      "India and China",
+      "India and Myanmar",
+      "India and Afghanistan"
+    ],
+    "question": "The Radcliffe line is a boundary between"
+  },
+  {
+    "correct_answer": "@angular/core",
+    "incorrect_answers": [
+      "@angular/router",
+      "@angular/event",
+      "angular-express-route"
+    ],
+    "question": "Router is part of which of the following module?"
+  },
+  {
+    "correct_answer": "JdbcTemplate",
+    "incorrect_answers": ["DatabaseTemplate", "JdbcPluggins", "JdbcDrivers"],
+    "question": "To deal with the databases, spring framework provides?"
+  },
+  {
+    "correct_answer": "advice",
+    "incorrect_answers": ["point-cut", "join-points", "weaving"],
+    "question": "In AOP, the job of an aspect is called"
+  },
+  {
+    "correct_answer": "Anywhere in classpath (including jar fle)",
+    "incorrect_answers": [
+      "Specific location within filesystem",
+      "Anywhere in project path (including jar fle)",
+      "In WEB_INF folder"
+    ],
+    "question": "ClassPathXmlApplicationContext searches .xml fle in"
+  },
+  {
+    "correct_answer": "util:constant",
+    "incorrect_answers": ["list", "set", "constructor-args"],
+    "question": "Which tag is also allowed by static field?"
+  },
+  {
+    "correct_answer": "Mud Mud Ke Na Dekh",
+    "incorrect_answers": [
+      "Yeh Jeewan Hai",
+      "Yeh Jo Mohabbat Hai",
+      "O Jaanewale"
+    ],
+    "question": "Which song is inscribed at the back of the autorickshaw in 'Andhadhun'??"
+  },
+  {
+    "correct_answer": "Deno",
+    "incorrect_answers": ["V8", "JavaScriptCore", "SpiderMonkey"],
+    "question": "Which of the following is not a JavaScript Engine?"
+  }
+]
