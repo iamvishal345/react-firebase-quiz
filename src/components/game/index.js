@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import Question from "./Question";
-import { loadQuestions } from "../helpers/QuestionsHelper";
-import HUD from "./HUD";
-import SaveScoreForm from "./SaveScoreForm";
+import "./style.scss";
+import Question from "components/question";
+import { loadQuestions } from "helpers/QuestionsHelper";
+import SaveScoreForm from "components/final";
+import ProgressBar from "components/progressBar";
 
 export default function Game({ history }) {
   const [questions, setQuestions] = useState([]);
@@ -57,7 +58,7 @@ export default function Game({ history }) {
     <>
       {loading && !done && <div id="loader" />}
       {!loading && !done && !haveFullName && (
-        <div>
+        <div className="game-container">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -87,7 +88,7 @@ export default function Game({ history }) {
       )}
       {!loading && !done && haveFullName && currentQuestion && (
         <div>
-          <HUD score={score} questionNumber={questionNumber} />
+          <ProgressBar score={score} questionNumber={questionNumber} />
           <Question
             question={currentQuestion}
             changeQuestion={changeQuestion}

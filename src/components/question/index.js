@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Question({ question, changeQuestion }) {
   const [classToApply, setClassToApply] = useState("");
   const [selectedAnswer, setSelectedAnswer] = useState(-1);
   const [answering, setAnswering] = useState(false);
   const [answer, setAnswer] = useState(-1);
+  const [time, setTime] = useState(30);
 
   const checkAnswer = (selectedAnswer) => {
     if (answering) return;
@@ -23,12 +24,30 @@ export default function Question({ question, changeQuestion }) {
       setAnswer(-1);
       setAnswering(false);
       changeQuestion(bonus);
+      setTime(30);
     }, 1000);
   };
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(time - 1);
+      if (time === 0) {
+        clearInterval(timer);
+        setTimeout(() => {
+          setSelectedAnswer(-1);
+          setAnswer(-1);
+          setAnswering(false);
+          changeQuestion(0);
+          setTime(30);
+        }, 0);
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [question, time, changeQuestion]);
   return (
     <div>
       <h3 dangerouslySetInnerHTML={{ __html: question.question }}></h3>
+      <strong>{time}</strong>
       {question.answerChoices.map((choice, index) => (
         <div
           key={index}

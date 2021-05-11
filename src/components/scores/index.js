@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getScores } from "./Firebase/Firebase";
+import { getScores } from "server/Firebase";
 
 export default function HighScores() {
   const [scores, setScores] = useState([]);

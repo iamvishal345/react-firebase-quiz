@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
-import Home from "./components/Home";
+import "./App.scss";
+import Home from "components/home";
 import { Route, BrowserRouter as Router } from "react-router-dom";
-import Game from "./components/Game";
-import HighScores from "./components/HighScores";
-import Footer from "./components/footer";
-import Header from "./components/header";
+import Game from "components/game";
+import HighScores from "components/scores";
+import Footer from "components/footer";
+import Header from "components/header";
 
 function App() {
   return (

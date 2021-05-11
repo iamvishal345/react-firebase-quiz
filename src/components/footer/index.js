@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as LinkedIn } from "../assets/linkedin.svg";
+import { ReactComponent as LinkedIn } from "assets/linkedin.svg";
 
 export default function Footer() {
   return (
@@ -38,5 +38,3 @@ export default function Footer() {
     </>
   );
 }
-
-//main container min-height:640px

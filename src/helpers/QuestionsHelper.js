@@ -1,17 +1,14 @@
-import Questions from "../json/week1.json";
 export const loadQuestions = async (
   amount = 10,
   category = 9,
   difficulty = "easy",
   type = "multiple"
 ) => {
-  // const url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`;
-  // const url = "../json/week1.json";
+  const url = `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`;
 
   try {
-    // const res = await fetch(url);
-    // const { results } = await res.json();
-    const results = Questions;
+    const res = await fetch(url);
+    const { results } = await res.json();
     return convertQuestionsFromAPI(results);
   } catch (err) {
     console.error(err);
