@@ -12,13 +12,16 @@ const Question = ({ question, changeQuestion }) => {
 
   const moveToNextQuestion = useCallback(
     (bonus) => {
-      setTimeout(() => {
+      const timeOut = setTimeout(() => {
         setSelectedAnswer(-1);
         setAnswer(-1);
         setAnswering(false);
         changeQuestion(bonus || 0);
         setTime(30);
       }, 1000);
+      return () => {
+        clearTimeout(timeOut);
+      };
     },
     [changeQuestion]
   );
