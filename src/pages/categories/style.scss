@@ -1,0 +1,33 @@
+.category-container {
+  width: 100%;
+  padding-top: 2rem;
+  min-height: 56rem;
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 20px;
+    .category {
+      padding: 10px;
+      height: 200px;
+      background-color: #1d609b;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 0px 5px 1px black;
+      }
+      svg {
+        fill: white;
+        width: 100px;
+        height: 100px;
+      }
+      strong {
+        color: #ffffff;
+        font-size: 16px;
+      }
+    }
+  }
+}

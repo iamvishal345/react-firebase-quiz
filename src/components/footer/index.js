@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss";
 import { ReactComponent as LinkedIn } from "assets/linkedin.svg";
 
 export default function Footer() {
@@ -8,14 +9,19 @@ export default function Footer() {
         <div className="footer-sub">
           <div className="footer_data">
             <div className="footer_made_by">
-              <p>Made with ❤</p>
+              <p>
+                Using{" "}
+                <a rel="noreferrer" href="https://opentdb.com/" target="_blank">
+                  Open Trivia DataBase
+                </a>
+              </p>
             </div>
             <div className="linkedin_footer">
               <p>
                 Connect with us on{" "}
                 <LinkedIn style={{ height: "20px", marginLeft: "5px" }} />
               </p>
-              <p id="vishal_profile">
+              <p className="profile">
                 <a
                   href="https://www.linkedin.com/in/vishal345"
                   target="_default"
@@ -23,7 +29,7 @@ export default function Footer() {
                   Vishal Sharma
                 </a>
               </p>
-              <p id="priya_profile">
+              <p className="profile">
                 <a
                   href="https://www.linkedin.com/in/priya-jain-90066bb3"
                   target="_default"

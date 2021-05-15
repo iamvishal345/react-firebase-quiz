@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/*<h1> Fire Quiz</h1> */}
-      <Link to="/game" className="btn">
+      <Link to="/categories" className="btn">
         Start Game
       </Link>
       <Link to="/highScores" className="btn">

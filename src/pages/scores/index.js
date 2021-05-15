@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./style.scss";
+import { Loader } from "components/loader";
 import { getScores } from "server/Firebase";
 
 export default function HighScores() {
@@ -18,16 +20,17 @@ export default function HighScores() {
 
   return (
     <>
-      {loading && <div id="loader"></div>}
+      {loading && <Loader />}
       {!loading && (
         <>
           <h1>High Scores</h1>
           <div id="highScoresList">
-            {scores.map((record, i) => (
-              <li key={i} className="high-score">
-                <span>{record.name}</span> - <span>{record.score}</span>
-              </li>
-            ))}
+            {scores &&
+              scores.map((record, i) => (
+                <li key={i} className="high-score">
+                  <span>{record.name}</span> - <span>{record.score}</span>
+                </li>
+              ))}
           </div>
         </>
       )}

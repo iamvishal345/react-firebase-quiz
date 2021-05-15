@@ -1,4 +1,29 @@
 .progress-container {
+  display: flex;
+  justify-content: space-between;
+  .hud-item {
+    .hud-prefix {
+      text-align: center;
+      font-size: 2rem;
+      color: #1d609b;
+    }
+    #progressBar {
+      width: 20rem;
+      height: 3rem;
+      border: 0.3rem solid #56a5eb;
+      margin-top: 1.2rem;
+      position: relative;
+      #progressBarFull {
+        height: 3rem;
+        position: absolute;
+        top: -3px;
+        left: -1px;
+        background-color: #56a5eb;
+        width: 0%;
+        transition: 300ms ease all;
+      }
+    }
+  }
   .score {
     color: #56a5eb;
   }

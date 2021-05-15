@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
+import PropTypes from "prop-types";
 
-export default function ProgressBar({ score, questionNumber }) {
+const ProgressBar = ({ score, questionNumber }) => {
   const width = (questionNumber / 10) * 100;
   return (
     <div id="hud" className="progress-container">
@@ -17,4 +18,11 @@ export default function ProgressBar({ score, questionNumber }) {
       </div>
     </div>
   );
-}
+};
+
+ProgressBar.propTypes = {
+  score: PropTypes.number.isRequired,
+  questionNumber: PropTypes.number.isRequired,
+};
+
+export default ProgressBar;

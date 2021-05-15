@@ -1,0 +1,26 @@
+@mixin label-active {
+  top: -20px;
+  left: 2px;
+  font-size: 16px;
+}
+.form-input {
+  position: relative;
+  width: fit-content;
+  .form-input-label {
+    font-size: 20px;
+    position: absolute;
+    pointer-events: none;
+    left: 16px;
+    top: 13px;
+    transition: 300ms ease all;
+    color: #868282;
+    &.input-value {
+      @include label-active();
+    }
+  }
+  > input:focus {
+    ~ .form-input-label {
+      @include label-active();
+    }
+  }
+}

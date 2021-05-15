@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.scss";
-import Home from "components/home";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-import Game from "components/game";
-import HighScores from "components/scores";
+import Home from "pages/home";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Footer from "components/footer";
 import Header from "components/header";
+
+import Game from "pages/game";
+import HighScores from "pages/scores";
+import Categories from "pages/categories";
 
 function App() {
   return (
@@ -13,9 +15,12 @@ function App() {
       <div className="app-container">
         <Header></Header>
         <div className="container">
-          <Route exact path="/" component={Home} />
-          <Route path="/game" component={Game} />
-          <Route path="/highScores" component={HighScores} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/game/:gameId" component={Game} />
+            <Route path="/categories" component={Categories} />
+            <Route path="/highScores" component={HighScores} />
+          </Switch>
         </div>
         <Footer></Footer>
       </div>

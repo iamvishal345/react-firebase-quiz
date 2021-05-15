@@ -1,0 +1,20 @@
+#top-heading {
+  text-align: left;
+  padding: 0.5rem 0 0 1rem;
+
+  a {
+    text-decoration: none;
+    h2 {
+      margin: 0;
+      span {
+        font-family: Bernard MT Condensed !important;
+        &#fire {
+          color: #1d609b;
+        }
+        &#quiz {
+          color: #56a5eb;
+        }
+      }
+    }
+  }
+}

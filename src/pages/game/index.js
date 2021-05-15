@@ -1,11 +1,14 @@
 import { useState, useEffect, useCallback } from "react";
 import "./style.scss";
+import { useParams } from "react-router-dom";
 import Question from "components/question";
 import { loadQuestions } from "helpers/QuestionsHelper";
 import SaveScoreForm from "components/final";
 import ProgressBar from "components/progressBar";
+import { Loader } from "components/loader";
+import InputField from "components/inputField";
 
-export default function Game({ history }) {
+export default function Game() {
   const [questions, setQuestions] = useState([]);
   const [fullName, setFullName] = useState("");
   const [haveFullName, setHaveFullName] = useState(false);
@@ -14,10 +17,13 @@ export default function Game({ history }) {
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [done, setDone] = useState(false);
-
+  const params = useParams();
   useEffect(() => {
-    loadQuestions().then(setQuestions).catch(console.error);
-  }, []);
+    params &&
+      loadQuestions({ category: params.gameId })
+        .then(setQuestions)
+        .catch(console.error);
+  }, [params]);
 
   const changeQuestion = useCallback(
     (bonus = 0) => {
@@ -56,7 +62,7 @@ export default function Game({ history }) {
 
   return (
     <>
-      {loading && !done && <div id="loader" />}
+      {loading && !done && <Loader />}
       {!loading && !done && !haveFullName && (
         <div className="game-container">
           <form
@@ -65,21 +71,13 @@ export default function Game({ history }) {
               setHaveFullName(true);
             }}
           >
-            <div className="form-input">
-              <input
-                type="text"
-                name="fullName"
-                id="fullName"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-              />
-              <label
-                className={`form-input-label ${fullName && "input-value"}`}
-                htmlFor="fullName"
-              >
-                Name
-              </label>
-            </div>
+            <InputField
+              value={fullName}
+              setValue={setFullName}
+              id="fullName"
+              name="fullName"
+              label="Name"
+            />
             <button type="submit" className="btn" disabled={!fullName}>
               Next
             </button>

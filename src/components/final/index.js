@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { Loader } from "components/loader";
 import { Link } from "react-router-dom";
 import { saveScoreDocument } from "server/Firebase";
-export default function SaveScoreForm({ score, name }) {
+
+const SaveScoreForm = ({ score, name }) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     try {
@@ -16,7 +19,7 @@ export default function SaveScoreForm({ score, name }) {
 
   return (
     <React.Fragment>
-      {loading && <div id="loader" />}
+      {loading && <Loader />}
 
       {!loading && (
         <div className="container">
@@ -31,4 +34,11 @@ export default function SaveScoreForm({ score, name }) {
       )}
     </React.Fragment>
   );
-}
+};
+
+SaveScoreForm.propTypes = {
+  score: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
+export default SaveScoreForm;

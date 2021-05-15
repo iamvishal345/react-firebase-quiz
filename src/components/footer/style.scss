@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  .footer-sub {
+    background-color: #383737;
+    padding: 20px 0px;
+    font-size: 12px;
+    .footer_data {
+      display: flex;
+      padding: 0px 46px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      p,
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .footer_made_by {
+        text-align: center;
+      }
+      .linkedin_footer {
+        > p {
+          display: flex;
+          align-items: center;
+        }
+        .profile {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer_made_by {
+    width: 100%;
+  }
+  .linkedin_footer {
+    width: 100%;
+  }
+  .linkedin_footer > p {
+    justify-content: center;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
