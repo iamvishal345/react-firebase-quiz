@@ -1,13 +1,10 @@
 @import "styles/common";
 .footer {
-  width: 100%;
-  &__sub {
-    padding: 20px 0px;
-    font-size: 12px;
-  }
   &__data {
+    width: 100%;
+    padding: 20px 1rem;
+    font-size: 12px;
     @include flex(row, space-between, center, wrap);
-    padding: 0px 46px;
     p,
     a {
       color: $text-secondary;
@@ -21,6 +18,7 @@
     }
     .linkedin_footer {
       @include flex(column, flex-start, flex-start, wrap);
+      margin-left: 8px;
       & p:first-child {
         svg {
           height: 20px;
@@ -38,15 +36,8 @@
 }
 
 @media screen and (max-width: 480px) {
-  .footer_made_by {
-    width: 100%;
-  }
   .linkedin_footer {
-    width: 100%;
     margin-top: 8px;
-  }
-  .linkedin_footer > p {
-    justify-content: center;
   }
   h3 {
     font-size: 2rem;
