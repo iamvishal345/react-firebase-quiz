@@ -1,3 +1,4 @@
+@import "styles/common";
 @mixin label-active {
   top: -20px;
   left: 2px;
@@ -13,7 +14,7 @@
     left: 16px;
     top: 13px;
     transition: 300ms ease all;
-    color: #868282;
+    color: $text-input-label;
     &.input-value {
       @include label-active();
     }

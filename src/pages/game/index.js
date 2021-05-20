@@ -6,7 +6,7 @@ import { loadQuestions } from "helpers/QuestionsHelper";
 import SaveScoreForm from "components/final";
 import ProgressBar from "components/progressBar";
 import { Loader } from "components/loader";
-import InputField from "components/inputField";
+import InputField from "components/core/inputField";
 
 export default function Game() {
   const [questions, setQuestions] = useState([]);
@@ -20,7 +20,7 @@ export default function Game() {
   const params = useParams();
   useEffect(() => {
     params &&
-      loadQuestions({ category: params.gameId })
+      loadQuestions({ category: params.gameId, difficulty: params.difficulty })
         .then(setQuestions)
         .catch(console.error);
   }, [params]);

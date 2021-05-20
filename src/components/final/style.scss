@@ -1,0 +1,4 @@
+@import "styles/common";
+.final-container {
+  @include flex(column, $align: center);
+}

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./style.scss";
-import InputField from "components/inputField";
+import InputField from "components/core/inputField";
 import { CATEGORIES } from "constants/categories";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const Categories = () => {
   const [searchStr, setSearchStr] = useState("");
+  const history = useHistory();
   return (
     <div className="category-container">
       <InputField
@@ -23,10 +24,30 @@ const Categories = () => {
             cat.name.toLowerCase().includes(searchStr.toLowerCase())
           )
           .map((cat) => (
-            <Link to={`game/${cat.value}`} className="category" key={cat.value}>
+            <div className="category" key={cat.value}>
               {cat?.icon}
               <strong>{cat.name}</strong>
-            </Link>
+              <div className="overlay">
+                <button
+                  onClick={() => history.push(`game/${cat.value}/easy`)}
+                  className="btn btn-round easy"
+                >
+                  Easy
+                </button>
+                <button
+                  onClick={() => history.push(`game/${cat.value}/medium`)}
+                  className="btn btn-round medium"
+                >
+                  Medium
+                </button>
+                <button
+                  onClick={() => history.push(`game/${cat.value}/hard`)}
+                  className="btn btn-round hard"
+                >
+                  Hard
+                </button>
+              </div>
+            </div>
           ))}
       </div>
     </div>

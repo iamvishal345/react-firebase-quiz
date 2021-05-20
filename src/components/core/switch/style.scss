@@ -1,0 +1,27 @@
+@import "styles/common";
+.switch {
+  &__container {
+    height: 40px;
+    width: 80px;
+    margin: 1rem 4rem 0 0;
+    border-radius: 50px;
+    position: relative;
+    background-color: $color-secondary;
+  }
+  &__btn {
+    height: 40px;
+    width: 40px;
+    border: none;
+    position: absolute;
+    border-radius: 50%;
+    transition: left 300ms;
+    left: 0;
+    &.active {
+      left: 40px;
+    }
+    svg {
+      height: 4rem;
+      width: 2.8rem;
+    }
+  }
+}

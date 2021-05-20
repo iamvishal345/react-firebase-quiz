@@ -1,18 +1,17 @@
+@import "styles/common";
 .timer {
   height: 50px;
   width: 50px;
-  background-color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  background-color: $color-success;
+  @include flex($justify: center, $align: center);
+  color: $text-light;
   font-size: 22px;
   border-radius: 50%;
   &.mid {
-    background-color: #f5d838f6;
+    background-color: $color-neutral;
   }
   &.low {
-    background-color: red;
+    background-color: $color-danger;
   }
 }
 
@@ -21,33 +20,33 @@
   margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.8rem;
-  border: 0.1rem solid rgb(86, 165, 235, 0.25);
-  background-color: white;
+  border: 0.1rem solid $border-dark;
+  background-color: $bg-light;
   border-radius: 8px;
   &:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    box-shadow: 0 0.4rem 1.4rem 0 $box-shadow-secondary;
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
   .choice-prefix {
     padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
-    color: white;
+    background-color: $border-primary;
+    color: $text-light;
     border-radius: 8px 0px 0px 8px;
   }
 
   .choice-text {
     padding: 1.5rem;
     width: 100%;
-    color: #1d609b;
+    color: $text-secondary;
     font-weight: 600;
   }
   &.correct {
-    background-color: #28a745;
+    background-color: $color-success;
   }
 
   &.incorrect {
-    background-color: #dc3545;
+    background-color: $color-danger;
   }
 }

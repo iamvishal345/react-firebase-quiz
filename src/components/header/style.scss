@@ -1,7 +1,9 @@
-#top-heading {
+@import "styles/common";
+.header {
   text-align: left;
   padding: 0.5rem 0 0 1rem;
-
+  @include flex($justify: space-between);
+  width: 100%;
   a {
     text-decoration: none;
     h2 {
@@ -9,10 +11,10 @@
       span {
         font-family: Bernard MT Condensed !important;
         &#fire {
-          color: #1d609b;
+          color: $text-secondary;
         }
         &#quiz {
-          color: #56a5eb;
+          color: $text-primary;
         }
       }
     }

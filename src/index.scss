@@ -1,3 +1,4 @@
+@import "styles/common";
 :root {
   font-size: 62.5%;
 }
@@ -7,11 +8,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
-}
-
-body {
-  background-color: #ecf5ff;
+  color: $text-global;
 }
 
 h1,
@@ -23,7 +20,7 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
+  color: $text-primary;
   margin-bottom: 5rem;
 }
 h2 {
@@ -35,31 +32,32 @@ h3 {
   font-size: 3rem;
   margin-bottom: 4rem;
   font-weight: 600;
-  color: #1d609b;
+  color: $text-secondary;
 }
 
 /* BUTTONS */
 .btn {
+  display: block;
   font-size: 1.8rem;
   padding: 1rem 0;
   width: 20rem;
   text-align: center;
-  border: 0.1rem solid #56a5eb;
+  border: 0.1rem solid $border-primary;
   margin-bottom: 1rem;
   text-decoration: none;
-  color: #56a5eb;
+  color: $text-primary;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0.1rem 0.2rem 0.7rem #56a5eb;
+  box-shadow: 0.1rem 0.2rem 0.7rem $box-shadow-primary;
 }
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0.1rem rgba(86, 185, 235, 0.5);
+  box-shadow: 0 0.4rem 1.4rem 0.1rem $box-shadow-secondary;
   transform: translateY(-0.1rem);
   transition: transform 150ms;
   color: white;
-  background-color: #56a5eb;
+  background-color: $color-primary;
 }
 
 .btn[disabled]:hover {
@@ -68,6 +66,12 @@ h3 {
   transform: none;
 }
 
+.btn-round {
+  font-size: 1.2rem;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+}
 /* FORMS */
 form {
   width: 100%;
@@ -82,10 +86,10 @@ input {
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  box-shadow: 0 0.1rem 1.4rem 0 $box-shadow-secondary;
   border-radius: 6px;
 }
 
 input::placeholder {
-  color: #aaa;
+  color: $text-disable;
 }

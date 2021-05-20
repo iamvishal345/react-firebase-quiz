@@ -1,0 +1,41 @@
+// Background
+$bg-primary: #ecf5ff;
+$bg-light: #ffffff;
+$bg-dark: #383737;
+
+//Text
+$text-global: #333;
+$text-primary: #56a5eb;
+$text-secondary: #1d609b;
+$text-disable: #aaa;
+$text-input-label: #868282;
+$text-light: #ffffff;
+
+//Border
+$border-primary: #56a5eb;
+$border-dark: #56a5eb40;
+$border-light: #ffffff;
+
+// Box Shadows
+$box-shadow-primary: #56a5eb;
+$box-shadow-secondary: #56b9eb80;
+
+//Common
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-neutral: #f5d838f6;
+$color-primary: #56a5eb;
+$color-secondary: #1d609b;
+
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
