@@ -7,14 +7,18 @@ const ProgressBar = ({ score, questionNumber }) => {
   return (
     <div id="hud" className="progress-container">
       <div className="hud-item">
-        <p className="hud-prefix">Question {questionNumber}/10</p>
+        <p className="hud-prefix" tabIndex={0}>
+          Question {questionNumber}/10
+        </p>
         <div id="progressBar">
           <div id="progressBarFull" style={{ width: `${width + 1}%` }}></div>
         </div>
       </div>
       <div className="hud-item">
         <p className="hud-prefix">Score</p>
-        <h2 className="score">{score}</h2>
+        <h2 className="score" tabIndex={0} aria-label={`Score is ${score}`}>
+          {score}
+        </h2>
       </div>
     </div>
   );

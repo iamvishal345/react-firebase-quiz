@@ -18,12 +18,17 @@ export default function Footer() {
           Connect with us on <LinkedIn />
         </p>
         <p className="profile">
-          <a href="https://www.linkedin.com/in/vishal345" target="_default">
+          <a
+            aria-label="LinkedIn Profile of Vishal Sharma"
+            href="https://www.linkedin.com/in/vishal345"
+            target="_default"
+          >
             Vishal Sharma
           </a>
         </p>
         <p className="profile">
           <a
+            aria-label="LinkedIn Profile of Priya Jain"
             href="https://www.linkedin.com/in/priya-jain-90066bb3"
             target="_default"
           >

@@ -52,7 +52,10 @@ const Question = ({ question, changeQuestion }) => {
 
   return (
     <div>
-      <h3 dangerouslySetInnerHTML={{ __html: question.question }}></h3>
+      <h3
+        tabIndex={0}
+        dangerouslySetInnerHTML={{ __html: question.question }}
+      ></h3>
       <div
         className={classNames("timer", {
           mid: time <= 20,
@@ -62,11 +65,12 @@ const Question = ({ question, changeQuestion }) => {
         {time}
       </div>
       {question.answerChoices.map((choice, index) => (
-        <div
+        <button
           key={index}
-          className={`choice-container ${
-            selectedAnswer === index && classToApply
-          } ${answer === index && "correct"}`}
+          className={classNames("choice-container", {
+            [classToApply]: selectedAnswer === index,
+            correct: answer === index,
+          })}
           onClick={() => checkAnswer(index)}
         >
           <p className="choice-prefix">{index + 1}</p>
@@ -74,7 +78,7 @@ const Question = ({ question, changeQuestion }) => {
             className="choice-text"
             dangerouslySetInnerHTML={{ __html: choice }}
           ></p>
-        </div>
+        </button>
       ))}
     </div>
   );

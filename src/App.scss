@@ -13,5 +13,17 @@
 
   &.dark {
     filter: invert(1) hue-rotate(180deg);
+    //Fixing some stuff
+    .category-container {
+      .category {
+        background-color: #a4ccf0;
+        svg {
+          fill: #3e3939 !important;
+        }
+        strong {
+          color: #3e3939 !important;
+        }
+      }
+    }
   }
 }

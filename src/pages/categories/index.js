@@ -6,6 +6,15 @@ import { useHistory } from "react-router-dom";
 const Categories = () => {
   const [searchStr, setSearchStr] = useState("");
   const history = useHistory();
+  const levelButton = (cat, level) => (
+    <button
+      aria-label={`${cat.name} ${level} level`}
+      onClick={() => history.push(`game/${cat.value}/${level}`)}
+      className={`btn btn-round ${level}`}
+    >
+      {level}
+    </button>
+  );
   return (
     <div className="category-container">
       <InputField
@@ -15,6 +24,7 @@ const Categories = () => {
         id="search"
         name="search"
         type="search"
+        ariaLabel="Search Quiz Catagories"
       />
       <div className="categories">
         {CATEGORIES.sort((a, b) =>
@@ -28,24 +38,9 @@ const Categories = () => {
               {cat?.icon}
               <strong>{cat.name}</strong>
               <div className="overlay">
-                <button
-                  onClick={() => history.push(`game/${cat.value}/easy`)}
-                  className="btn btn-round easy"
-                >
-                  Easy
-                </button>
-                <button
-                  onClick={() => history.push(`game/${cat.value}/medium`)}
-                  className="btn btn-round medium"
-                >
-                  Medium
-                </button>
-                <button
-                  onClick={() => history.push(`game/${cat.value}/hard`)}
-                  className="btn btn-round hard"
-                >
-                  Hard
-                </button>
+                {levelButton(cat, "easy")}
+                {levelButton(cat, "medium")}
+                {levelButton(cat, "hard")}
               </div>
             </div>
           ))}

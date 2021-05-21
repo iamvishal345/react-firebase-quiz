@@ -8,6 +8,7 @@ import { ReactComponent as DarkSvg } from "assets/dark-mode.svg";
 const Switch = ({ value, setValue }) => (
   <div className="switch__container">
     <button
+      aria-label={value ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setValue(!value)}
       className={classNames("switch__btn", { active: value })}
     >

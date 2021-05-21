@@ -12,7 +12,10 @@ function Header({ value, setValue }) {
           <span id="quiz">Junkies</span>
         </h2>
       </Link>
-      <Switch value={value} setValue={setValue} />
+      <div>
+        <div></div>
+        <Switch value={value} setValue={setValue} />
+      </div>
     </div>
   );
 }

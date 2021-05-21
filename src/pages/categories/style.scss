@@ -41,8 +41,12 @@
         .hard {
           @include level($color-danger);
         }
+        &:focus-within {
+          filter: opacity(0.9);
+        }
       }
-      &:hover {
+      &:hover,
+      &:focus-within {
         box-shadow: 0px 0px 5px 1px black;
         .overlay {
           filter: opacity(0.9);
